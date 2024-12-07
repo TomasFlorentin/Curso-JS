@@ -24,7 +24,6 @@ let data = [
     ["Sata", 21]
 ]
 
-
 console.table(data)
 
 data = [
@@ -39,3 +38,56 @@ console.table(data)
 console.group("Usuario:")
 console.log("Nombre: Tomas")
 console.log("Edad: 20")
+console.groupEnd()
+
+// time
+
+console.time("Tiempo de ejecución 1")
+
+for (let i = 0; i < 10000; i++) {
+
+}
+
+console.time("Tiempo de ejecución 2")
+
+for (let i = 0; i < 10000; i++) {
+
+}
+
+console.timeEnd("Tiempo de ejecución 1") // mismo texto de cuando empiezo a contar
+
+for (let i = 0; i < 10000; i++) {
+
+}
+
+console.timeEnd("Tiempo de ejecución 2")
+
+// assert
+
+let age = 17
+console.assert(age >= 18, "El usuario debe ser mayor de edad.")
+
+// count
+
+console.count("Click")
+console.count("Click")
+console.count("Click")
+console.countReset("Click")
+console.count("Click")
+
+// trace
+
+function funcA() {
+    funcB()
+}
+
+function funcB() {
+console.trace("Seguimiento de la ejecución.")
+}
+
+funcA()
+
+// clear
+
+// console.clear()
+
